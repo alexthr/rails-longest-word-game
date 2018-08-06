@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="header">
+    <%= image_tag 'romejko.png', {:style => "width: 200px"} %>
+    <h1 style="display: inline;">Result</h1>
+  </div>
+
+  <p>Available letters: <strong><%=@letters%></strong></p>
+  <p>Your attempt: <strong><%= @word.upcase %></strong></p>
+  <p>Time taken: <%= @time %></p>
+  <p>Score: <%= @result[:score] %></p>
+  <p>Cumulative score: <%=session[:cumulative_score]%></p>
+  <h3><%= @result[:message] %></h3>
+
+  <a href="/new" class ="btn btn-primary">New attempt</a>
+</div>
+
